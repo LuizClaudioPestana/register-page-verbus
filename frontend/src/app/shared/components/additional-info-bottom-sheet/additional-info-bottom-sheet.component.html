@@ -1,0 +1,24 @@
+<div class="sheet-container">
+  <h3>Informações adicionais</h3>
+  <p class="muted">
+    Preencha aqui o conteúdo extra que será enviado pelo formulário de cadastro.
+  </p>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Informações adicionais</mat-label>
+    <textarea
+      matInput
+      rows="6"
+      [formControl]="control"
+      placeholder="Digite informações adicionais"
+    ></textarea>
+    <mat-hint align="end">{{ control.value.length }}/1000</mat-hint>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="close()">Cancelar</button>
+    <button mat-flat-button color="primary" type="button" (click)="save()">
+      Salvar
+    </button>
+  </div>
+</div>

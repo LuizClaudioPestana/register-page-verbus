@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span class="brand">Cadastro App - Desafio</span>
+
+  <span class="spacer"></span>
+
+  <a mat-button routerLink="/login" routerLinkActive="active-link">Login</a>
+  <a mat-button routerLink="/register" routerLinkActive="active-link">Cadastro</a>
+  <a mat-button routerLink="/forgot-password" routerLinkActive="active-link">Esqueci a senha</a>
+
+  <button mat-button *ngIf="isLoggedIn()" (click)="logout()">
+    Logout
+  </button>
+</mat-toolbar>
+
+<div class="page-wrapper">
+  <router-outlet></router-outlet>
+</div>
